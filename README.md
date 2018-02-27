@@ -1,0 +1,2 @@
+# somatic_motif_from_bam
+从任意一个样本的bam文件以及NA12878，得到somatic motif突变谱信息
