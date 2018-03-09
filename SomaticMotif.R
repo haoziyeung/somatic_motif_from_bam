@@ -28,3 +28,10 @@ pdf(outputname)
 plotSignatures(SampleSig, sub = annotationforinput)
 makePie(SampleSig)
 dev.off()
+
+
+outputtsvname = paste(nameforinput, ".SomaticMotif.tsv", sep="")
+write.table(x=SampleSig$weights, sep="\t",row.names=FALSE,col.names=TRUE, quote=FALSE,file=outputtsvname)
+
+outputtsvname = paste(nameforinput, ".SomaticMotif.Unexplained.Residue", sep="")
+write.table(x=SampleSig$unknown, sep="\t",row.names=FALSE,col.names=FALSE, quote=FALSE,file=outputtsvname)
